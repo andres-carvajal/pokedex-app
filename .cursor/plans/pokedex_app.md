@@ -109,7 +109,7 @@ flowchart TD
 
 ### Phase 1 -- Project Setup (~15 min)
 
-- Scaffold with `npm create vite@latest . -- --template react-ts`
+- Scaffold with `bun create vite@latest . -- --template react-ts`
 - Install deps: `@mui/material @emotion/react @emotion/styled @tanstack/react-query react-router-dom`
 - Install dev deps: `vitest @testing-library/react @testing-library/jest-dom jsdom`
 - `git init` + initial commit
@@ -158,7 +158,7 @@ flowchart TD
 
 ### Phase 8 -- Deploy + Final Commits (~15 min)
 
-- Deploy to Vercel (`npx vercel --prod`) or Netlify
+- Deploy to Vercel (`bunx vercel --prod`) or Netlify
 - Clean up commit history (ensure meaningful commit messages throughout)
 - Final review pass
 

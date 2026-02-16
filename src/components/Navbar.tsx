@@ -16,7 +16,7 @@ export default function Navbar() {
           sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', flexGrow: 1 }}
           onClick={() => navigate('/')}
         >
-          <CatchingPokemonIcon sx={{ mr: 1, fontSize: 28 }} />
+          <CatchingPokemonIcon sx={{ mr: 1, fontSize: 28, rotate: '180deg' }} />
           <Typography variant="h6" component="div">
             Pokédex
           </Typography>

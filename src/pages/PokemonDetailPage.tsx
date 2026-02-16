@@ -15,6 +15,7 @@ import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import { usePokemonDetail } from '../api/hooks'
 import { useCaughtPokemon } from '../context/CaughtPokemonContext'
 import TypeChip from '../components/TypeChip'
+import PokemonImage from '../components/PokemonImage'
 
 const STAT_LABELS: Record<string, string> = {
   hp: 'HP',
@@ -95,25 +96,18 @@ export default function PokemonDetailPage() {
           }}
         >
           {/* Image */}
-          <Box
+          <PokemonImage
+            src={artworkUrl}
+            alt={pokemon.name}
+            width={{ xs: 200, md: 280 }}
+            height={{ xs: 200, md: 280 }}
             sx={{
-              width: { xs: 200, md: 280 },
-              height: { xs: 200, md: 280 },
               flexShrink: 0,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
               backgroundColor: 'grey.100',
               borderRadius: 3,
+              p: 2,
             }}
-          >
-            <Box
-              component="img"
-              src={artworkUrl ?? undefined}
-              alt={pokemon.name}
-              sx={{ width: '100%', height: '100%', objectFit: 'contain', p: 2 }}
-            />
-          </Box>
+          />
 
           {/* Info */}
           <Box sx={{ flexGrow: 1, width: '100%' }}>
@@ -176,7 +170,7 @@ export default function PokemonDetailPage() {
               variant={caught ? 'outlined' : 'contained'}
               color={caught ? 'error' : 'primary'}
               size="large"
-              startIcon={<CatchingPokemonIcon />}
+              startIcon={<CatchingPokemonIcon sx={{ rotate: caught ? '0deg' : '180deg' }} />}
               onClick={handleToggleCatch}
               sx={{ minWidth: 180 }}
             >

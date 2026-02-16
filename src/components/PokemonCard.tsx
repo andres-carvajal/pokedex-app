@@ -1,6 +1,7 @@
-import { Card, CardContent, CardMedia, Typography, Box } from '@mui/material'
+import { Card, CardContent, Typography, Box } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { getTypeColor } from '../utils/typeColors'
+import PokemonImage from './PokemonImage'
 
 interface PokemonCardProps {
   id: number
@@ -37,18 +38,13 @@ export default function PokemonCard({ id, name, spriteUrl, types }: PokemonCardP
       >
         #{String(id).padStart(3, '0')}
       </Typography>
-      <CardMedia
-        component="img"
-        image={spriteUrl}
+      <PokemonImage
+        src={spriteUrl}
         alt={name}
-        sx={{
-          width: 96,
-          height: 96,
-          objectFit: 'contain',
-          mx: 'auto',
-          mt: 2,
-          imageRendering: 'pixelated',
-        }}
+        width={96}
+        height={96}
+        pixelated
+        sx={{ mx: 'auto', mt: 2 }}
       />
       <CardContent sx={{ flexGrow: 1, pt: 1 }}>
         <Typography variant="subtitle1" fontWeight={600} sx={{ textTransform: 'capitalize' }}>
