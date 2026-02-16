@@ -4,6 +4,7 @@ import { ThemeProvider, CssBaseline } from '@mui/material'
 import theme from './theme/theme'
 import { CaughtPokemonProvider } from './context/CaughtPokemonContext'
 import Navbar from './components/Navbar'
+import ScrollToTop from './components/ScrollToTop'
 import PokemonListPage from './pages/PokemonListPage'
 import PokemonDetailPage from './pages/PokemonDetailPage'
 import CollectionPage from './pages/CollectionPage'
@@ -24,6 +25,7 @@ function App() {
         <CssBaseline />
         <BrowserRouter>
           <CaughtPokemonProvider>
+            <ScrollToTop />
             <Navbar />
             <Routes>
               <Route path="/" element={<PokemonListPage />} />

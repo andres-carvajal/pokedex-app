@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { Box, Container, Grid, Typography, Button, CircularProgress, Alert } from '@mui/material'
 import { usePokemonList, useAllPokemonNames } from '../api/hooks'
 import PokemonCard from '../components/PokemonCard'
+import PokemonCardSkeleton from '../components/PokemonCardSkeleton'
 import SearchBar from '../components/SearchBar'
 
 export default function PokemonListPage() {
@@ -50,9 +51,13 @@ export default function PokemonListPage() {
       )}
 
       {isLoading ? (
-        <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
-          <CircularProgress size={48} />
-        </Box>
+        <Grid container spacing={2}>
+          {Array.from({ length: 12 }).map((_, i) => (
+            <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }} key={i}>
+              <PokemonCardSkeleton />
+            </Grid>
+          ))}
+        </Grid>
       ) : displayItems.length === 0 ? (
         <Box sx={{ textAlign: 'center', py: 8 }}>
           <Typography variant="h6" color="text.secondary">
