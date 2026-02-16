@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "test": "vitest",
-    "test:run": "vitest run"
+    "dev": "bunx --bun vite",
+    "build": "bunx tsc -b && bunx --bun vite build",
+    "lint": "bunx eslint .",
+    "preview": "bunx --bun vite preview",
+    "test": "bunx vitest",
+    "test:run": "bunx vitest run"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

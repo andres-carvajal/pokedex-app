@@ -16,6 +16,7 @@ A responsive Pokédex application built with React, TypeScript, and Material UI.
 | Category | Choice | Rationale |
 |---|---|---|
 | Framework | React 19 + TypeScript | Type safety and modern React features |
+| Runtime | Bun | Fast package manager, runtime, and bundler |
 | Build tool | Vite | Fast dev server and optimized builds |
 | UI library | Material UI (MUI) v7 | Polished component library, bonus requirement |
 | Data fetching | TanStack Query v5 | Built-in caching, loading/error states, infinite queries |
@@ -28,20 +29,20 @@ A responsive Pokédex application built with React, TypeScript, and Material UI.
 
 ### Prerequisites
 
-- Node.js 18+ and npm
+- [Bun](https://bun.sh/) 1.0+
 
 ### Installation
 
 ```bash
 git clone <repo-url>
 cd pokedex-app
-npm install
+bun install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
@@ -49,15 +50,15 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ### Build
 
 ```bash
-npm run build
-npm run preview
+bun run build
+bun run preview
 ```
 
 ### Tests
 
 ```bash
-npm run test        # watch mode
-npm run test:run    # single run
+bun run test        # watch mode
+bun run test:run    # single run
 ```
 
 ## Project Structure
@@ -126,9 +127,9 @@ All AI-generated code was reviewed and understood before inclusion. The developm
 
 | Command | Description |
 |---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Type-check and build for production |
-| `npm run preview` | Preview production build locally |
-| `npm run test` | Run tests in watch mode |
-| `npm run test:run` | Run tests once |
-| `npm run lint` | Run ESLint |
+| `bun run dev` | Start development server |
+| `bun run build` | Type-check and build for production |
+| `bun run preview` | Preview production build locally |
+| `bun run test` | Run tests in watch mode |
+| `bun run test:run` | Run tests once |
+| `bun run lint` | Run ESLint |
