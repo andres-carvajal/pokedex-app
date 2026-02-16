@@ -133,3 +133,6 @@ All AI-generated code was reviewed and understood before inclusion. The developm
 | `bun run test` | Run tests in watch mode |
 | `bun run test:run` | Run tests once |
 | `bun run lint` | Run ESLint |
+
+## Live Version
+Visit the following [link](https://pokedex-app-gules-six.vercel.app).
